@@ -1,0 +1,107 @@
+index.html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Damla ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff9ecf, #ffc1e3);
+    color: white;
+}
+
+h1 {
+    margin-top: 60px;
+    font-size: 45px;
+}
+
+p {
+    font-size: 22px;
+    width: 70%;
+    margin: 20px auto;
+}
+
+img {
+    width: 250px;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.7);
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #ff4da6;
+    cursor: pointer;
+}
+
+.heart {
+    position: fixed;
+    top: -10px;
+    font-size: 20px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Damla'm 💖</h1>
+
+<p>
+Tam 3 yıldır hayatımın en güzel hikayesini seninle yazıyorum.  
+Sen kalbimin en güzel yerisin.  
+Eğer aşk bir kaderse, benim en güzel kaderim sensin.  
+Seni her şeyden çok seviyorum ❤️
+</p>
+
+<img src="damla.jpg" alt="Bizim Foto">
+
+<br>
+
+<button onclick="alert('Damla ❤️ 3 yıl geçti ama sana olan sevgim her gün daha da büyüyor.')">
+Bana Tıkla 💌
+</button>
+
+<!-- Kibariye - Ecel Olsun -->
+<iframe width="0" height="0"
+src="https://www.youtube.com/embed/1xYq9WcF0J8?autoplay=1&loop=1&playlist=1xYq9WcF0J8"
+frameborder="0"
+allow="autoplay">
+</iframe>
+
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}
+
+setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
